@@ -1,4 +1,8 @@
 function checkButtons () {
+    while (input.buttonsAB.isPressed()) {
+        makerController.player1.setButton(ArcadeButton.AB, true)
+        displayBoth()
+    }
     while (input.buttonA.isPressed()) {
         makerController.player1.setButton(ArcadeButton.A, true)
         displayColorA()
@@ -17,6 +21,11 @@ function turnOffLights () {
 function displayColorB () {
     light.showRing(
     `black black black black black pink purple red purple pink`
+    )
+}
+function displayBoth () {
+    light.showRing(
+    `pink purple red purple pink pink purple red purple pink`
     )
 }
 function displayColorA () {
