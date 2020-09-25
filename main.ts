@@ -26,7 +26,7 @@ function displayColorA () {
 }
 makerController.player1.reset()
 forever(function () {
+    checkButtons()
     makerController.player1.setAnalogThreshold(ArcadeAnalogButton.LeftRight, -1023, 1023)
     makerController.player1.setAnalogThreshold(ArcadeAnalogButton.DownUp, -1023, 1023)
-    checkButtons()
 })
